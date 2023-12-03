@@ -1,6 +1,7 @@
 package com.zipcodewilmington.singlylinkedlist;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -22,29 +23,30 @@ public class SinglyLinkedList<T> {
             this.next = null;
         }
     }
-    public void add(T data){
+    public void add(T data) {
 
         if (head == null) {
             Node<T> newNode = new Node<>(data);
             head = newNode;
+        } else {
+            Node<T> node = head;
+
+            while (node.next != null) {
+                node = node.next;
+            }
+
+            Node<T> nodeAdd = new Node<>(data);
+
+            node.next = nodeAdd;
+
         }
-        Node<T> node = head;
-
-        while (node.next != null) {
-            node = node.next;
-        }
-
-        Node<T> nodeAdd = new Node<>(data);
-
-        node.next = nodeAdd;
-
     }
 
     public void remove(int index) {
         //remove an element (specified by numeric index) from the list
-        if (head != null && index == 0) {
+        if (this.head != null && index == 0) {
             // head is removed -> the next node after head becomes the new head
-            head = this.head.next;
+            this.head = head.next;
             // If I didn't refer back to the specific "THIS HEAD" then
         } else {
             Node<T> node = head; // Making a reference to the other nodes...
@@ -92,6 +94,7 @@ public class SinglyLinkedList<T> {
 
     public T get(int index){
         // returns the element at the specified index
+        return null;
 
     }
 
