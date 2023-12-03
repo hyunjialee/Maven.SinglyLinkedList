@@ -40,7 +40,7 @@ public class SinglyLinkedList<T> {
 
     }
 
-    public void remove(Integer index) {
+    public void remove(int index) {
         //remove an element (specified by numeric index) from the list
         if (head != null && index == 0) {
             // head is removed -> the next node after head becomes the new head
@@ -79,26 +79,33 @@ public class SinglyLinkedList<T> {
         }
     }
 
-    public void contains(){
+    public void contains(T data){
     }
 
-    public void find(){
-
-    }
-
-    public void size(){
+    public void find(T data){
 
     }
 
-    public void get(){
+    public int size(){
+        return 0;
+    }
+
+    public T get(int index){
+        // returns the element at the specified index
 
     }
 
     public void copy(){
+        //returns a new linked list containing the same values
+        //(look up deep versus shallow copy)
+        // deep = new linked list, new objects || not affecting the original if changed
+        // shallow  =  copies references to original objects || original is affected if changed
 
     }
 
     public void sort(){
+        //sorts the list using your algorithm of choice.
+        // You must perform the sorting yourself (no fair using someone else's library)
 
     }
 }
